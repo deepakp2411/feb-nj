@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import connectDB from "./db/connectdb.js";
 import cors from "cors";
-import createDoc from "./models/studentModel.js";
+import { getAllDoc } from "./models/studentModel.js";
 
 const PORT = process.env.PORT;
 
@@ -24,7 +24,10 @@ connectDB(DATABASE_URL);
 //   { value: "This is bad" },
 // ]);
 
-createDoc()
+// createDoc()
+
+// Get All Document
+getAllDoc()
 
 app.listen(PORT, () => {
   console.log(`Server is running at ${PORT}`);
